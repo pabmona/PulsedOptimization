@@ -1,0 +1,36 @@
+FEAP
+0 0 0 3 7 27
+
+NOPRint
+
+INCLude,ipara
+
+INCLude,iparpul
+
+INCLude,icorr
+
+PARAmeters
+Lz = 0.0025024
+
+INCLude,iinte
+
+INCLude,imesh
+
+INCLude,imate
+
+INCLude,iboun
+
+END
+
+TIE,1.e-16
+
+OPTImize
+
+batch
+ 	 tplo
+end
+disp,501,7
+
+INCLude,iresol3
+
+STOP

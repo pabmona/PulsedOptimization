@@ -1,0 +1,11 @@
+BATCh
+	LOOP,iter,10
+	  	TOL,,tl
+	  	COMM,iter
+	  	UTANg,,1
+	NEXT,iter
+    tres
+tres,outp
+END
+
+

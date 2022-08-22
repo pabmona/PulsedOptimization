@@ -1,0 +1,87 @@
+MATErial 1 ! Thermoelement p-type
+ user 2,0,1,2,3,4,0,6,7    
+ elas mu lb 
+ aphT aT aT aT 
+ Tref tf
+ resi r0 r1 r2
+ seeb a0 a1 a2
+ dd2T 0
+ kapp k0 k1 k2
+ nern 0
+ hall 0
+ righ 0
+ rhom rh
+ hcap cp
+ rhoq 0
+ mxwl 0
+ tway 0
+
+MATErial 2 ! Tin-lead
+ user 2,0,1,2,3,4,0,6,7             
+ elas 1.6799e10 3.2475e10 
+ aphT 27e-6 27e-6 27e-6 
+ Tref tf
+ resi 1/4.716981e+06 0 0 
+ seeb 0
+ dd2T 0
+ kapp 48 0 0 
+ nern 0
+ hall 0
+ righ 0
+ rhom 7310
+ hcap 226
+ rhoq 0
+ mxwl 0
+ tway 0
+
+MATErial 3 ! Copper
+ user 2,0,1,2,3,4,0,6,7             
+ elas 4.3893e10 7.1615e10 
+ aphT 17e-6 17e-6 17e-6 
+ Tref tf
+ resi 1/581e5 0 0 
+ seeb 0
+ dd2T 0
+ kapp 386 0 0 
+ nern 0
+ hall 0
+ righ 0
+ rhom 8960
+ hcap 385
+ rhoq 0
+ mxwl 0
+ tway 0
+
+MATErial 4	!Al2O3
+ user 2,0,1,2,3,0,0,6,7            
+ elas 1.5079e11 1.6336e11 
+ aphT 5e-6 5e-6 5e-6 
+ Tref tf
+ resi 1e20 0 0 
+ seeb 0
+ dd2T 0
+ kapp 48 0 0 
+ nern 0
+ hall 0
+ righ 0
+ rhom 3570
+ hcap 837
+ rhoq 0
+ mxwl 0
+ tway 0
+
+PARAmeter
+ jc = jz/(Co*2*Ly)  !jc = It/(Cu*z1)
+
+  MATErial 5 ! Aplicaci�n de corriente: entra
+   user,5,0,0,0,0,4,0,6,7
+    tcu,0
+    tcv,0
+    tcw,0
+    qc,0
+    jc,-jc  
+	nst,1
+	tin,it
+	tfin,ft
+
+
